@@ -27,4 +27,4 @@ Ce projet met en œuvre des compétences en systèmes embarqués, transmission d
 
   
 # Schéma synoptique
-  
+[voir le schama synoptique](images.md#-image--schema-synoptique)
