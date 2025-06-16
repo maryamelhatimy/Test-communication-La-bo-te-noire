@@ -30,4 +30,7 @@ Le projet vise à :
 - ATmega328P x2
 - MPU6050
 - LCD 16x2 (mode 4 bits)
-
+- Alimentation
+  
+## Schéma synoptique
+  
