@@ -2,6 +2,14 @@
 Dans les systèmes embarqués modernes, la collecte et l’analyse de données en temps réel jouent un rôle essentiel pour la sécurité et le suivi des équipements. Inspiré du principe des boîtes noires utilisées dans l’aviation, ce projet vise à développer un système embarqué capable d’enregistrer et de transmettre les données de mouvement (vitesse, orientation) à l’aide d’un capteur inertiel, avec visualisation en temps réel sur une station de contrôle.  
 Ce projet met en œuvre des compétences en systèmes embarqués, transmission de données via I2C, conception de circuits imprimés, ainsi qu’en intégration matérielle complète.
 
+# Sommaire
+
+- [cahier des charges ](# Cahier des charges)
+- [Schéma synoptique](# Schéma synoptique)
+- [Matériel utilisé](#matériel-utilisé)
+- [Fonctionnement](#fonctionnement)
+- [Résultats](#résultats)
+- [Conclusion](#conclusion)
 # Cahier des charges
 
 ## Objectifs fonctionnels
@@ -18,7 +26,7 @@ Ce projet met en œuvre des compétences en systèmes embarqués, transmission d
 - Alimentation externe obligatoire, hors du cube
 - Schéma et PCB réalisés avec **KiCad**
 
-## 🔧 Matériel utilisé
+## Matériel utilisé
 
 - [ATmega328P](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf) ×2  
 - [MPU6050](https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf)  
@@ -27,4 +35,5 @@ Ce projet met en œuvre des compétences en systèmes embarqués, transmission d
 
   
 # Schéma synoptique
+Ce système embarqué est composé de deux unités : une boîte noire et une station de contrôle, connectées via le bus I2C. La boîte noire comprend un capteur MPU6050 qui détecte les mouvements de la main et envoie les données à un microcontrôleur ATmega328P configuré en maître. Celui-ci traite les données et les transmet à la station de contrôle, où un autre ATmega328P, configuré en esclave, les reçoit. Les informations sont ensuite affichées sur un écran LCD. Chaque unité est alimentée séparément par une source de 5V.
 [voir le schema synoptique](Images.md#-image--schema-synoptique)
