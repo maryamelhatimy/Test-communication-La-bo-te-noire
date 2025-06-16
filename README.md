@@ -4,12 +4,9 @@ Ce projet met en œuvre des compétences en systèmes embarqués, transmission d
 
 # Sommaire
 
-- [cahier des charges ](# Cahier des charges)
-- [Schéma synoptique](# Schéma synoptique)
-- [Matériel utilisé](#matériel-utilisé)
-- [Fonctionnement](#fonctionnement)
-- [Résultats](#résultats)
-- [Conclusion](#conclusion)
+- [cahier des charges ](#Cahier-des-charges)
+- [Schéma synoptique](#Schéma-synoptique)
+  
 # Cahier des charges
 
 ## Objectifs fonctionnels
