@@ -58,14 +58,17 @@ Ce système embarqué est composé de deux unités : une boîte noire et une sta
 
 ## Routage des pistes
 - Traçage des pistes électriques reliant les composants.
+  
 ![ Routage des pistes](https://github.com/user-attachments/assets/14889db7-c03d-41f7-9225-8cdfcd50c843)
 
 ## Définition des contours du PCB (Edge Cuts)
 - Délimitation de la forme finale et des dimensions de la carte.
+  
 ![ Définition des contours du PCB](https://github.com/user-attachments/assets/3df37061-8004-4fdc-8a90-1eaaaba42349)
 
 ## Visualisation 3D du PCB
 - Contrôle visuel du circuit imprimé en trois dimensions avant fabrication.
+  
 ![ Visualisation 3D du PCB](https://github.com/user-attachments/assets/29374317-7dc3-43e4-95ee-a7a15d3b6c9a)
 
 
