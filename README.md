@@ -20,7 +20,7 @@ Ce projet met en œuvre des compétences en systèmes embarqués, transmission d
 
 ## 🔧 Matériel utilisé
 
-- [ATmega328P](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-42735-8-bit-AVR-Microcontroller-ATmega328-328P_Datasheet.pdf) ×2  
+- [ATmega328P](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf) ×2  
 - [MPU6050](https://invensense.tdk.com/wp-content/uploads/2015/02/MPU-6000-Datasheet1.pdf)  
 - [LCD 16x2 (mode 4 bits)](https://www.sparkfun.com/datasheets/LCD/HD44780.pdf)  
 - Alimentation
