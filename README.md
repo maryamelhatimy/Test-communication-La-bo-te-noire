@@ -40,11 +40,11 @@ Ce système embarqué est composé de deux unités : une boîte noire et une sta
 
 ## Création du schéma électronique
 - Conception du schéma intégrant le microcontrôleur **ATmega328P**, le capteur **MPU-6050** et les connecteurs.
-![schéma électronique](https://github.com/user-attachments/assets/e0ca44fe-e079-4cb6-b4f7-86d7db28ba9b)
+[voir le schéma électronique](Images.md#Création-du-schéma-électronique)
 
 ## Affectation des empreintes (footprints)
 - Attribution des empreintes physiques correspondant aux composants.
-![Affectation des empreintes ](https://github.com/user-attachments/assets/70a11453-4c76-4677-ac0e-eeab1162be2e)
+[voir Affectation des empreintes](Images.md#Affectation-des-empreintes)
 
 ## Création de la carte PCB (implantation)
 - Placement des empreintes des composants sur le circuit imprimé.
