@@ -5,6 +5,7 @@ Ce projet s’inscrit dans le cadre du Tekbot Robotics Challenge et fait appel �
 
 - [cahier des charges ](#Cahier-des-charges)
 - [Schéma synoptique](#Schéma-synoptique)
+- [Réalisation du PCB](#Réalisation-du-PCB)
   
 # Cahier des charges
 
@@ -34,4 +35,37 @@ Ce projet s’inscrit dans le cadre du Tekbot Robotics Challenge et fait appel �
 Ce système embarqué est composé de deux unités : une boîte noire et une station de contrôle, connectées via le bus I2C. La boîte noire comprend un capteur MPU6050 qui détecte les mouvements de la main et envoie les données à un microcontrôleur ATmega328P configuré en maître. Celui-ci traite les données et les transmet à la station de contrôle, où un autre ATmega328P, configuré en esclave, les reçoit. Les informations sont ensuite affichées sur un écran LCD. Chaque unité est alimentée séparément par une source de 5V.
 
 [voir le schema synoptique](Images.md#-image--schema-synoptique)
+
+ # Réalisation du PCB
+
+## Création du schéma électronique
+- Conception du schéma intégrant le microcontrôleur **ATmega328P**, le capteur **MPU-6050** et les connecteurs.
+![schéma électronique](https://github.com/user-attachments/assets/e0ca44fe-e079-4cb6-b4f7-86d7db28ba9b)
+
+## Affectation des empreintes (footprints)
+- Attribution des empreintes physiques correspondant aux composants.
+![Affectation des empreintes ](https://github.com/user-attachments/assets/70a11453-4c76-4677-ac0e-eeab1162be2e)
+
+## Création de la carte PCB (implantation)
+- Placement des empreintes des composants sur le circuit imprimé.
+
+  ![Création de la carte PCB](https://github.com/user-attachments/assets/ea794759-0ee5-4ad1-9845-91bff85d9f4c)
+
+## Réorganisation des composants
+- Ajustement de la disposition pour optimiser l’espace et faciliter le routage.
+
+![Réorganisation des composants](https://github.com/user-attachments/assets/159148ee-3c07-492a-8ed8-c2e2e21f3099)
+
+## Routage des pistes
+- Traçage des pistes électriques reliant les composants.
+![ Routage des pistes](https://github.com/user-attachments/assets/14889db7-c03d-41f7-9225-8cdfcd50c843)
+
+## Définition des contours du PCB (Edge Cuts)
+- Délimitation de la forme finale et des dimensions de la carte.
+![ Définition des contours du PCB](https://github.com/user-attachments/assets/3df37061-8004-4fdc-8a90-1eaaaba42349)
+
+## Visualisation 3D du PCB
+- Contrôle visuel du circuit imprimé en trois dimensions avant fabrication.
+![ Visualisation 3D du PCB](https://github.com/user-attachments/assets/29374317-7dc3-43e4-95ee-a7a15d3b6c9a)
+
 
