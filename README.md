@@ -42,7 +42,7 @@ Ce système embarqué est composé de deux unités : une boîte noire et une sta
 ## 1. Fonction principale
 Ce bloc a pour objectif de fournir une tension continue et stable de 5V nécessaire au fonctionnement des différents composants électroniques du système, notamment le capteur MPU6050, les microcontrôleurs ATmega328P et l'écran LCD.
 ## 2. Fonctionnement
-On utilise trois batteries de 3,7V en série pour obtenir environ 12V.  
+On utilise trois batteries de Li-Ion 3,7V rechargeables montées en série pour obtenir environ 12V.  
 Le régulateur L7805 reçoit ce 12V en entrée (Vin) et fournit du 5V en sortie (Vout).  
 Deux condensateurs (330nF et 100nF) sont utilisés pour stabiliser la tension et filtrer les parasites.
 - 330nF à l’entrée
