@@ -7,6 +7,7 @@ Ce projet s’inscrit dans le cadre du Tekbot Robotics Challenge et fait appel �
 - [Schéma synoptique](#Schéma-synoptique)
 - [Réalisation du PCB](#Réalisation-du-PCB)
 - [Description fonctionnelle des différents blocs du système](#Description-fonctionnelle-des-différents-blocs-du-système)
+- [La communication I2C](#La-communication-I2C)
   
 # Cahier des charges
 
@@ -63,47 +64,15 @@ Nous avons donc simulé des circuits simples sur Proteus, notamment un montage a
 # La communication I2C
 Ce document constitue une présentation détaillée et approfondie du protocole **I2C (Inter-Integrated Circuit)**, qui est un standard de communication série synchrone très répandu dans l’électronique embarquée. Ce protocole facilite l’échange d’informations entre un ou plusieurs maîtres et plusieurs périphériques esclaves en utilisant seulement deux fils, simplifiant ainsi les connexions matérielles tout en assurant une communication fiable et efficace.  
 
-
-# Sommaire
-
-- [📘 Introduction](#-introduction)
-- [⚙️ Principe de fonctionnement](#-principe-de-fonctionnement)  
-  - [🔹 Prise de contrôle du bus](#-prise-de-contrôle-du-bus)  
-  - [🔹 Transmission d'un octet](#-transmission-dun-octet)  
-  - [🔹 Transmission d'une adresse](#-transmission-dune-adresse)  
-  - [🔹 Écriture d'une donnée](#-écriture-dune-donnée)  
-  - [🔹 Arbitration](#-arbitration)
-  - [🔹 Clock Stretching](#-clock-stretching)
-- [📡 Communication I2C entre MPU6050 et ATmega328P](#-communication-i2c-entre-mpu6050-et-atmega328p)  
-  - [🔹 Fonctionnement de la liaison I2C](#-fonctionnement-de-la-liaison-i2c)
-  - [🔹 Envoi des commandes et réception des données](#-envoi-des-commandes-et-reception-des-donnees)
-
-
----
-
-## 📘 Introduction
-Dans les systèmes électroniques modernes, les microcontrôleurs, capteurs, mémoires, convertisseurs de données et autres circuits intégrés doivent souvent échanger des informations entre eux.
-Pour assurer une transmission fiable, rapide et structurée des données, on utilise des protocoles de communication (c'est un ensemble de règles et de conventions définissant la manière dont les données sont échangées entre les différents composants d’un système).
-On distingue deux types principaux :  
-**-Parallèle** : rapide, mais nécessite plusieurs fils.  
-**-Série** : plus simple, utilise moins de fils, adaptée aux systèmes embarqués.  
-Parmi les protocoles série les plus connus : **UART,SPI,I2C,CAN,LIN...**    
-Parmi les protocoles série les plus utilisés, **le protocole I2C** se distingue par sa simplicité, son faible coût de mise en œuvre, et sa capacité à connecter de nombreux périphériques avec seulement deux lignes. Voyons maintenant de plus près son fonctionnement.  
-👉 Voyons maintenant de plus près son fonctionnement.
-
-
----
-
 ## ⚙️ Principe de fonctionnement
 [Protocole I2C](https://fr.wikipedia.org/wiki/I2C) (Inter-Integrated Circuit), développé par Philips (aujourd’hui NXP) dans les années 1980, est un standard mondial pour la communication série entre circuits intégrés, surtout dans les systèmes embarqués. Il utilise un bus bidirectionnel à deux fils : SDA pour les données et SCL pour l’horloge, permettant à plusieurs périphériques de partager le même canal tout en gérant précisément l’accès.  
 Contrairement à des protocoles comme SPI, I2C minimise le nombre de connexions nécessaires, ce qui simplifie le routage sur circuit imprimé et réduit les coûts.   Ce protocole est largement utilisé dans des domaines variés : automobile, domotique, informatique, etc.  
 I2C fonctionne selon un modèle.[maître-esclave](https://www.ionos.fr/digitalguide/serveur/know-how/le-principe-master/slave): un ou plusieurs maîtres contrôlent la communication, et les esclaves répondent aux requêtes. Chaque communication commence par une condition **Start**, suivie de **l’adresse de l’esclave** et d’un bit de direction (lecture/écriture). Les données sont ensuite échangées octet par octet, chaque octet étant confirmé par **un bit d’acquittement**(ACK). La communication se termine par une condition **Stop**, qui libère le bus.  
 Techniquement, I2C utilise des lignes ouvertes (open-drain) : les dispositifs ne peuvent que tirer les lignes vers le bas, tandis que des résistances pull-up maintiennent le niveau haut par défaut. Cela évite les conflits, notamment en mode multi-maîtres.  
 Enfin, I2C offre une grande flexibilité en termes de vitesse, du mode standard (100 kHz) au mode rapide (jusqu’à 3,4 MHz) et au-delà dans certaines variantes propriétaires.  
-![communication-I2C](https://github.com/user-attachments/assets/42f1202c-0ec3-4e69-a15c-abace28aff09) 
+![communication-I2C](https://github.com/user-attachments/assets/18f95ad8-0fa3-49cb-99ce-52408ff42054)
 
 
----
 
 ### 🔹 Prise de contrôle du bus
 
@@ -114,9 +83,10 @@ La condition Start joue un rôle fondamental : elle marque l’exclusivité du m
 Les résistances pull-up sur les lignes SDA et SCL maintiennent ces lignes à un état logique haut par défaut, garantissant ainsi que le bus est en repos quand aucune communication n’a lieu.
 
 ## 🖼️ Image : BUS I2C 
-![Bus-i2c](https://github.com/user-attachments/assets/56dc1d36-e7e6-44f3-b15a-36ae52d9d87d)  
+![Bus-i2c](https://github.com/user-attachments/assets/592b1e08-6f4c-4e0a-972b-d53158d6ed80)
+
 ## 🖼️ Image : condition start
-![start-condition](https://github.com/user-attachments/assets/c1bdf777-61d8-4f95-a602-330b61cba147) 
+![start-condition](https://github.com/user-attachments/assets/2eeeefcc-9f5b-47ae-8ac2-8a300c7d97c5)
 
 ---
 
@@ -142,7 +112,7 @@ Tous les périphériques esclaves surveillent le bus et comparent l’adresse re
 
 Cette étape est essentielle car elle garantit que seules les communications destinées à un périphérique spécifique sont traitées, évitant ainsi toute interférence entre plusieurs périphériques sur le même bus.
 ## 🖼️ Image : transmission d'une adresse  
-![transmission_d'une_adresse](https://github.com/user-attachments/assets/426c9eaf-1dc3-4bfc-bb9d-1b4b468bced7)
+![transmission_d'une_adresse](https://github.com/user-attachments/assets/d0ee80b6-b169-4cd5-9149-25fd731a3583)
 
 ---
 
@@ -156,9 +126,11 @@ Pour terminer la communication, le maître génère une condition **Stop (P)**, 
 
 Il existe également une condition **Restart**, qui est une condition Start générée sans condition Stop préalable, permettant de chaîner plusieurs opérations sur le même bus sans interruption.  
 ## 🖼️ Image : transmission d'une donnee
-![transmission-d'une-donnee](https://github.com/user-attachments/assets/51e00c84-0cf6-4005-928a-f2d0413f72a8)  
+![transmission-d'une-donnee](https://github.com/user-attachments/assets/cd3818b4-20a3-4ab2-8ad2-63cb27b47d49)
+
 ## 🖼️ Image : condition stop
-![stop-condition](https://github.com/user-attachments/assets/a3bcc978-09d5-408d-a788-68827986eedc) 
+![stop-condition](https://github.com/user-attachments/assets/61143d18-67bd-4ae0-a9b4-aafa01f3786f)
+
 
 ---
 
@@ -170,8 +142,7 @@ Lorsqu’un maître commence à transmettre, il surveille la ligne SDA et la com
 
 Ce mécanisme garantit qu’aucune collision électrique ne se produit sur le bus et que seule une source transmet à un instant donné. C’est une des forces du protocole I2C, qui permet une coexistence harmonieuse de plusieurs maîtres sur un même bus.
 ## 🖼️ Image : arbitrage
-![arbitrage](https://github.com/user-attachments/assets/2b7e7f8a-e0f6-46b2-9b76-5f87cdfb8dcb)
-
+![arbitrage](https://github.com/user-attachments/assets/2a51d266-e7b7-4805-9f25-3cc9b081af5d)
 
 
 ### 🔹 Clock Stretching
@@ -179,7 +150,8 @@ Ce mécanisme garantit qu’aucune collision électrique ne se produit sur le bu
 Le clock stretching est une fonctionnalité du protocole I2C qui permet à un esclave de ralentir temporairement la communication lorsqu’il n’est pas prêt à envoyer ou recevoir des données. Cela se fait en gardant la ligne SCL à l’état bas (LOW), empêchant ainsi le maître de continuer à envoyer des impulsions d’horloge. Une fois que l’esclave est prêt, il libère la ligne SCL, permettant au maître de reprendre la transmission. Cette technique est utile, par exemple, lorsque le capteur a besoin de plus de temps pour traiter ou préparer les données. Le maître doit respecter cet étirement d’horloge pour éviter des erreurs de communication.  
 
 ## 🖼️ Image : clock stretching
-![clock streatching](https://github.com/user-attachments/assets/1149606a-e454-484b-9eb4-7030ac5e0d8f)  
+![clock streatching](https://github.com/user-attachments/assets/3b85fa91-3ed1-4b41-8336-1256be15648b)
+ 
 ---
 ## 📡 Communication I2C entre MPU6050 et ATmega328P
 Dans notre projet, le microcontrôleur **ATmega328P** communique avec le capteur **MPU6050** à l’aide du protocole **I2C**. Ce protocole permet de transmettre les données d’accélération et de rotation via deux fils (`SDA` et `SCL`). Le **MPU6050** agit comme **esclave**, et l’**ATmega328P** comme **maître**.
@@ -224,7 +196,8 @@ La communication suit ce processus :
 
 ## Création du schéma électronique
 - Conception du schéma intégrant le microcontrôleur ATmega328P, le capteur MPU-6050 et les connecteurs.
-[voir le schéma électronique](Images.md#Création-du-schéma-électronique)
+![image](https://github.com/user-attachments/assets/2226d946-79b6-465e-9cfa-7eee849d7faa)
+
 
 ## Affectation des empreintes (footprints)
 - Attribution des empreintes physiques correspondant aux composants.
