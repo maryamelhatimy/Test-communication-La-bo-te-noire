@@ -178,8 +178,8 @@ Le maître démarre la communication en envoyant une adresse unique correspondan
 | 🔧 Pull-up | Recommandé : 4.7kΩ sur SDA et SCL |  
 
 ## 🖼️ Image : liaison-i2c-entre-mpu6050-et-atmega328p
-![liaison-entre-mpu6050-atmega328p](https://github.com/user-attachments/assets/f277cd9e-e71a-4ea2-91e9-050bcb0050a0)
- 
+![liaison-entre-mpu6050-atmega328p](https://github.com/user-attachments/assets/6cea5b00-bb19-4816-af14-adf2e965201a)
+
 ---
 
 ### 🔹 Envoi des commandes et réception des données
@@ -189,14 +189,13 @@ La communication suit ce processus :
 - Cette commande est envoyée via le bus I2C sous forme d’une trame contenant l’adresse de l’esclave, suivie de l’adresse du registre ciblé.  
 - Une fois la commande reçue, le MPU6050 prépare la donnée correspondante et la transmet dès que le maître la demande.  
 - Le maître récupère alors la ou les valeurs envoyées par le capteur, généralement sur plusieurs octets, qu’il traite ensuite pour en extraire l’information de mouvement (accélération, rotation, température).
-  
-[voir le datasheet du MPU6050](https://www.alldatasheet.com/datasheet-pdf/download/1132807/TDK/MPU-6050.html)    
+
 
  # Réalisation du PCB
 
 ## Création du schéma électronique
 - Conception du schéma intégrant le microcontrôleur ATmega328P, le capteur MPU-6050 et les connecteurs.
-![image](https://github.com/user-attachments/assets/2226d946-79b6-465e-9cfa-7eee849d7faa)
+![image](https://github.com/user-attachments/assets/ad92ac89-4a8e-428d-a4cd-909fe7866881)
 
 
 ## Affectation des empreintes (footprints)
