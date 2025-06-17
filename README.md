@@ -51,6 +51,10 @@ Deux condensateurs (330nF et 100nF) sont utilisés pour stabiliser la tension et
 📌 Le schéma suivant illustre ce montage :
 ![image](https://github.com/user-attachments/assets/690d4b70-85dd-4cbb-bff8-a1c31e7033fd)
 
+## Bloc d’entrée
+
+Nous avons choisi le capteur MPU6050 parce qu’il intègre un accéléromètre et un gyroscope dans un seul composant. Cela permet de mesurer les mouvements et les rotations de la main avec précision. Il est facile à utiliser grâce au protocole I2C, et il fonctionne bien avec le microcontrôleur ATmega328P. En plus, il est peu coûteux et largement utilisé dans les projets embarqués. D’autres capteurs peuvent faire un travail similaire, comme le MPU9250 (qui ajoute un magnétomètre), le LSM6DS3 (plus récent et plus économe), ou le ADXL34
+
  # Réalisation du PCB
 
 ## Création du schéma électronique
