@@ -34,7 +34,8 @@ Ce projet s’inscrit dans le cadre du Tekbot Robotics Challenge et fait appel �
 # Schéma synoptique
 Ce système embarqué est composé de deux unités : une boîte noire et une station de contrôle, connectées via le bus I2C. La boîte noire comprend un capteur MPU6050 qui détecte les mouvements de la main et envoie les données à un microcontrôleur ATmega328P configuré en maître. Celui-ci traite les données et les transmet à la station de contrôle, où un autre ATmega328P, configuré en esclave, les reçoit. Les informations sont ensuite affichées sur un écran LCD. Chaque unité est alimentée séparément par une source de 5V.
 
-[voir le schema synoptique](Images.md#-image--schema-synoptique)
+![schéma synoptique](https://github.com/user-attachments/assets/8b703337-a753-49e2-947b-a988aeb19c89)
+
 
  # Réalisation du PCB
 
