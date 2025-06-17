@@ -6,6 +6,7 @@ Ce projet s’inscrit dans le cadre du Tekbot Robotics Challenge et fait appel �
 - [cahier des charges ](#Cahier-des-charges)
 - [Schéma synoptique](#Schéma-synoptique)
 - [Réalisation du PCB](#Réalisation-du-PCB)
+- [Description fonctionnelle des différents blocs du système](#Description-fonctionnelle-des-différents-blocs-du-système)
   
 # Cahier des charges
 
@@ -36,6 +37,18 @@ Ce système embarqué est composé de deux unités : une boîte noire et une sta
 
 ![schéma synoptique](https://github.com/user-attachments/assets/8b703337-a753-49e2-947b-a988aeb19c89)
 
+# Description fonctionnelle des différents blocs du système
+## Bloc d’alimentation
+## 1. Fonction principale
+Ce bloc a pour objectif de fournir une tension continue et stable de **5V** nécessaire au fonctionnement des différents composants électroniques du système, notamment le **capteur MPU6050**, les **microcontrôleurs ATmega328P** et l'**écran LCD**.
+## 2. Fonctionnement
+Le régulateur **7805** reçoit le 12V en entrée (`Vin`) et fournit du 5V en sortie (`Vout`).  
+Deux condensateurs sont utilisés pour stabiliser la tension :
+- **330nF** à l’entrée
+- **100nF** à la sortie
+
+📌 Le schéma suivant illustre ce montage :
+![image](https://github.com/user-attachments/assets/690d4b70-85dd-4cbb-bff8-a1c31e7033fd)
 
  # Réalisation du PCB
 
