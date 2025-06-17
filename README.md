@@ -40,12 +40,13 @@ Ce système embarqué est composé de deux unités : une boîte noire et une sta
 # Description fonctionnelle des différents blocs du système
 ## Bloc d’alimentation
 ## 1. Fonction principale
-Ce bloc a pour objectif de fournir une tension continue et stable de **5V** nécessaire au fonctionnement des différents composants électroniques du système, notamment le **capteur MPU6050**, les **microcontrôleurs ATmega328P** et l'**écran LCD**.
+Ce bloc a pour objectif de fournir une tension continue et stable de 5V nécessaire au fonctionnement des différents composants électroniques du système, notamment le capteur MPU6050, les microcontrôleurs ATmega328P et l'écran LCD.
 ## 2. Fonctionnement
-Le régulateur **7805** reçoit le 12V en entrée (`Vin`) et fournit du 5V en sortie (`Vout`).  
-Deux condensateurs sont utilisés pour stabiliser la tension :
-- **330nF** à l’entrée
-- **100nF** à la sortie
+On utilise trois batteries de 3,7V en série pour obtenir environ 12V.  
+Le régulateur L7805 reçoit ce 12V en entrée (Vin) et fournit du 5V en sortie (Vout).  
+Deux condensateurs (330nF et 100nF) sont utilisés pour stabiliser la tension et filtrer les parasites.
+- 330nF à l’entrée
+- 100nF à la sortie
 
 📌 Le schéma suivant illustre ce montage :
 ![image](https://github.com/user-attachments/assets/690d4b70-85dd-4cbb-bff8-a1c31e7033fd)
@@ -53,7 +54,7 @@ Deux condensateurs sont utilisés pour stabiliser la tension :
  # Réalisation du PCB
 
 ## Création du schéma électronique
-- Conception du schéma intégrant le microcontrôleur **ATmega328P**, le capteur **MPU-6050** et les connecteurs.
+- Conception du schéma intégrant le microcontrôleur ATmega328P, le capteur MPU-6050 et les connecteurs.
 [voir le schéma électronique](Images.md#Création-du-schéma-électronique)
 
 ## Affectation des empreintes (footprints)
