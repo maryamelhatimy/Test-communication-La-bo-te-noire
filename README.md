@@ -267,7 +267,7 @@ Valider le **fonctionnement de la communication I2C** entre deux microcontrôleu
 (![WhatsApp Image 2025-06-18 at 11 28 38 (1) (2)](https://github.com/user-attachments/assets/88f6527a-9f2b-40c0-a4ea-c1e3489a3cf6) 
 
 #### le resultat
-https://github.com/user-attachments/assets/4c4c0d8b-3419-41eb-a1e2-a6e68fe7bff7
+https://github.com/user-attachments/assets/f24d194f-d3f9-40da-8c5a-b3b9a5e75ebc
 
 ---
 
@@ -297,8 +297,7 @@ Simuler une application plus réaliste en utilisant des **capteurs réels(MPU605
 ![WhatsApp Image 2025-06-18 at 11 45 24](https://github.com/user-attachments/assets/4bf55be3-fb1c-43e9-98be-2359a4609619)  
 
 #### Le resultat
-https://github.com/user-attachments/assets/f24d194f-d3f9-40da-8c5a-b3b9a5e75ebc
-
+https://github.com/user-attachments/assets/4c4c0d8b-3419-41eb-a1e2-a6e68fe7bff7
 ---
 
 ###  Étape 3 : Intégration avec ATmega328P (préparation au PCB)
