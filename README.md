@@ -297,7 +297,8 @@ Simuler une application plus réaliste en utilisant des **capteurs réels(MPU605
 ![WhatsApp Image 2025-06-18 at 11 45 24](https://github.com/user-attachments/assets/4bf55be3-fb1c-43e9-98be-2359a4609619)  
 
 #### Le resultat
-https://github.com/user-attachments/assets/4c4c0d8b-3419-41eb-a1e2-a6e68fe7bff7
+
+https://github.com/user-attachments/assets/1c67d0e5-90eb-4aa1-bebf-cd58e934528a
 ---
 
 ###  Étape 3 : Intégration avec ATmega328P (préparation au PCB)
