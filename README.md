@@ -299,6 +299,8 @@ Simuler une application plus réaliste en utilisant des **capteurs réels(MPU605
 #### Le resultat
 
 https://github.com/user-attachments/assets/1c67d0e5-90eb-4aa1-bebf-cd58e934528a
+
+
 ---
 
 ###  Étape 3 : Intégration avec ATmega328P (préparation au PCB)
