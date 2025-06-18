@@ -97,7 +97,7 @@ Nous avons conçu un système simple dans lequel :
 
 Le code Arduino correspondant a été compilé dans l’IDE Arduino, puis le fichier .hex généré a été intégré dans Proteus pour tester le comportement du circuit.
 
-
+https://github.com/user-attachments/assets/d1cc5dd5-9109-4822-be6e-245693643c00
 #### Observations :
 - Lorsque le bouton est pressé, le relais s’active et allume la LED.
 - Le comportement observé est conforme à la logique attendue et cohérente.
