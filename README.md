@@ -8,7 +8,7 @@ Ce projet s’inscrit dans le cadre du Tekbot Robotics Challenge et fait appel �
 - [Réalisation du PCB](#Réalisation-du-PCB)
 - [Description fonctionnelle des différents blocs du système](#Description-fonctionnelle-des-différents-blocs-du-système)
 - [La communication I2C](#La-communication-I2C)
-- [Etapes_de_validation_avant_PCB](#Etapes-de-validation-avant-PCB) 
+- [Etapes de validation avant PCB](#Etapes-de-validation-avant-PCB) 
   
 # Cahier des charges
 
@@ -52,6 +52,11 @@ Deux condensateurs (330nF et 100nF) sont utilisés pour stabiliser la tension et
 
 📌 Le schéma suivant illustre ce montage :
 ![image](https://github.com/user-attachments/assets/690d4b70-85dd-4cbb-bff8-a1c31e7033fd)
+
+   La simulation sur proteus 
+   Les condensateurs de filtrage ont été omis dans ce schéma pour simplifier la représentation, bien qu’ils soient indispensables en pratique pour assurer la stabilité et réduire le bruit.
+
+   ![image](https://github.com/user-attachments/assets/a75470b7-4158-495d-adb8-76909df0c935)
 
 ## Bloc d’entrée(dans la boite noire)
 
