@@ -59,8 +59,48 @@ Nous avons choisi le capteur MPU6050 parce qu’il intègre un accéléromètre 
 
 ![image](https://github.com/user-attachments/assets/2c989400-0c29-46dc-907c-dcd7208a431b)
 ## Bloc de commande(dans la boite noire)
-Avant d’intégrer le microcontrôleur ATmega328P dans la boîte noire et de concevoir le circuit imprimé, nous avons d’abord réalisé plusieurs essais pour nous familiariser avec ce composant, car nous avions l’habitude d’utiliser des cartes Arduino.
-Nous avons donc simulé des circuits simples sur Proteus, notamment un montage avec l’ATmega328P, un bouton poussoir, un relais et une lampe 12V. Le principe était le suivant : lorsqu’on appuie sur le bouton, le relais active l’alimentation de la lampe, qui s’allume. Cette étape nous a permis de comprendre le fonctionnement du microcontrôleur et son pilotage direct sans carte Arduino.
+### 🛠️ Étape 1 : Prise en main du microcontrôleur ATmega328P
+
+Avant de démarrer le système complet, l’équipe s’est d’abord focalisée sur le microcontrôleur ATmega328P. L’objectif était de comprendre pleinement sa structure interne, ses broches, ainsi que la manière de le configurer et de le simuler.
+
+Nous avons étudié ses principales caractéristiques et son brochage :
+
+- Le format DIP à 28 broches, comme dans les cartes Arduino Uno
+- Les broches d’E/S numériques D0 à D13, pour piloter des LED, relais, etc.
+- Les entrées analogiques A0 à A5, pour la lecture de capteurs
+- L’interface I2C via SDA (PC4) et SCL (PC5)
+- La communication série UART via TX (PD1) et RX (PD0)
+- Les broches d’alimentation : VCC, GND, AVCC, AREF
+- La broche RESET, généralement tirée à l’état haut via une résistance
+- Les broches XTAL1/XTAL2 pour le quartz (utilisé plus tard)
+
+Ces éléments nous ont permis de préparer une simulation fiable sous Proteus pour la suite du projet.
+![image](https://github.com/user-attachments/assets/62775b28-f4f7-42ed-b677-140ee88c7769)
+
+
+
+### 🧪 Étape 2 : Simulation basique de l’ATmega328P dans Proteus
+
+Après avoir étudié la configuration du microcontrôleur, nous avons réalisé une première simulation simple sous Proteus, afin de valider son fonctionnement dans un environnement simulé.
+
+À ce stade :
+
+- Nous n'avons pas utilisé les connexions d’alimentation (VCC/AVCC) ni de quartz externe, car elles ne sont pas obligatoires pour les logiques simples dans Proteus.
+- Nous nous sommes concentrés sur le comportement des broches dans un exemple réel.
+
+#### Scénario de simulation :
+Nous avons conçu un système simple dans lequel :
+
+- Un bouton poussoir est connecté à une entrée numérique.
+- Lorsqu’on appuie sur le bouton, l’ATmega active un relais via une sortie numérique.
+- Ce relais commande une lampe LED 12V, simulant une charge réelle.
+
+Le code Arduino correspondant a été compilé dans l’IDE Arduino, puis le fichier .hex généré a été intégré dans Proteus pour tester le comportement du circuit.
+
+
+#### Observations :
+- Lorsque le bouton est pressé, le relais s’active et allume la LED.
+- Le comportement observé est conforme à la logique attendue et cohérente.
 
 # La communication I2C
 Ce document constitue une présentation détaillée et approfondie du protocole **I2C (Inter-Integrated Circuit)**, qui est un standard de communication série synchrone très répandu dans l’électronique embarquée. Ce protocole facilite l’échange d’informations entre un ou plusieurs maîtres et plusieurs périphériques esclaves en utilisant seulement deux fils, simplifiant ainsi les connexions matérielles tout en assurant une communication fiable et efficace.  
