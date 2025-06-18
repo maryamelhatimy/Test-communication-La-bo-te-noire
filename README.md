@@ -267,7 +267,7 @@ Valider le **fonctionnement de la communication I2C** entre deux microcontrôleu
 (![WhatsApp Image 2025-06-18 at 11 28 38 (1) (2)](https://github.com/user-attachments/assets/88f6527a-9f2b-40c0-a4ea-c1e3489a3cf6) 
 
 #### le resultat
-inserer la video ici
+https://github.com/user-attachments/assets/d1cc5dd5-9109-4822-be6e-245693643c00
 
 ---
 
