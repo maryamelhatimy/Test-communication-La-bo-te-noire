@@ -397,7 +397,7 @@ Le routage généré a ensuite été importé dans KiCad pour la vérification f
 ![image](https://github.com/user-attachments/assets/0b16bd0a-1850-40e2-8e45-25d22ce4fcd2)
 
 
-(https://github.com/user-attachments/assets/f897ede6-44c2-42a2-96d0-31dc648d50c1)
+https://github.com/user-attachments/assets/f897ede6-44c2-42a2-96d0-31dc648d50c1
 
 
 
