@@ -362,7 +362,7 @@ La réalisation d’un PCB nécessite des choix précis de composants et un bon 
 
 
  # Réalisation du PCB
-
+# premiere PCB (Boite noire)
 ## Création du schéma électronique
 - Conception du schéma intégrant le microcontrôleur ATmega328P, le capteur MPU-6050 et les connecteurs.
 ![image](https://github.com/user-attachments/assets/4daa371b-60f8-45ec-88ee-bb22b75d8ffa)
@@ -400,7 +400,33 @@ Le routage généré a ensuite été importé dans KiCad pour la vérification f
 ![image](https://github.com/user-attachments/assets/0b16bd0a-1850-40e2-8e45-25d22ce4fcd2)
 
 
-https://github.com/user-attachments/assets/f897ede6-44c2-42a2-96d0-31dc648d50c1
+https://github.com/user-attachments/assets/f897ede6-44c2-42a2-96d0-31dc648d50c1  
+
+# Deuxieme PCB( Station de contole )
+## Création du schéma électronique  
+- Conception du schéma intégrant le microcontrôleur ATmega328P, lcd et les connecteurs
+![image](https://github.com/user-attachments/assets/9f6d6881-972e-4cf5-aead-8e29ac9a7a28)
+## Anotation  
+![image](https://github.com/user-attachments/assets/f0cfca43-da82-427a-95cb-d35d16d0c2fa)  
+## Correction des erreurs  
+![image](https://github.com/user-attachments/assets/c2f14007-8ee4-48d3-a43c-2045063d54e4)  
+## Footprints  
+![image](https://github.com/user-attachments/assets/281e78ea-b57c-46fb-bf95-157df926afa8)  
+## Organisation du PCB  
+![image](https://github.com/user-attachments/assets/d452cbd4-1514-47d7-be36-b994db5ffae6)  
+## Définition des contours du PCB (Edge Cuts)  
+![image](https://github.com/user-attachments/assets/14793231-34de-4975-bb9c-2c221a570426)  
+## Plan de masse GND  
+![image](https://github.com/user-attachments/assets/7bf3e68c-8578-4ddb-849d-672ac3639993)  
+## Routage
+![image](https://github.com/user-attachments/assets/d20a6e74-2798-4ae9-a9ba-9a0280a9abcb)  
+## Visualisation 3D du PCB
+![image](https://github.com/user-attachments/assets/3e2ea849-39b4-47cb-a77e-ba3574701d50)  
+
+
+
+
+
 
 
 
