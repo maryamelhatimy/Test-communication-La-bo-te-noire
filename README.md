@@ -374,14 +374,23 @@ La réalisation d’un PCB nécessite des choix précis de composants et un bon 
 ![image](https://github.com/user-attachments/assets/64ee506b-c1e7-46de-824a-649cb73a8f54)
 
 ## Routage des pistes
-- Traçage des pistes électriques reliant les composants.
-  
-![ Routage des pistes](https://github.com/user-attachments/assets/14889db7-c03d-41f7-9225-8cdfcd50c843)
+#### Introduction : Routage automatique avec FreeRouting
+Pour la phase de routage de mon circuit imprimé, j’ai utilisé un routage automatique à l’aide de l’application FreeRouting. Ce choix m’a permis de gagner du temps, d’obtenir un routage optimisé, et de réduire les erreurs humaines dans le placement des pistes.  
+FreeRouting est un outil open source externe à KiCad, capable d’analyser les connexions (netlist) et de générer un routage respectant les règles de design (DRC). Il offre plusieurs avantages :  
+•	🔹 Optimisation automatique des longueurs et des croisements de pistes  
+•	🔹 Respect des règles de clearance et de largeur de pistes  
+•	🔹 Visualisation rapide des pistes critiques et des contraintes  
+•	🔹 Gain de temps par rapport au routage manuel complet  
+Le routage généré a ensuite été importé dans KiCad pour la vérification finale et l’inspection des règles électriques (DRC).  
+![image](https://github.com/user-attachments/assets/968138f4-4dd2-4971-a71d-c887548e13d0)
+
 
 ## Définition des contours du PCB (Edge Cuts)
-- Délimitation de la forme finale et des dimensions de la carte.
-  
-![ Définition des contours du PCB](https://github.com/user-attachments/assets/3df37061-8004-4fdc-8a90-1eaaaba42349)
+- Délimitation de la forme finale et des dimensions de la carte. 
+![image](https://github.com/user-attachments/assets/32678869-7ea0-4449-a07f-74b8b4168ad1)  
+
+## Verificaton des erreurs (DRC)
+![image](https://github.com/user-attachments/assets/c029f01b-0e0d-4864-b490-48a2cf801f62)  
 
 ## Visualisation 3D du PCB
 - Contrôle visuel du circuit imprimé en trois dimensions avant fabrication.
