@@ -362,12 +362,13 @@ La réalisation d’un PCB nécessite des choix précis de composants et un bon 
 
 ## Création du schéma électronique
 - Conception du schéma intégrant le microcontrôleur ATmega328P, le capteur MPU-6050 et les connecteurs.
-![image](https://github.com/user-attachments/assets/ad92ac89-4a8e-428d-a4cd-909fe7866881)
+![image](https://github.com/user-attachments/assets/4daa371b-60f8-45ec-88ee-bb22b75d8ffa)
 
 
 ## Affectation des empreintes (footprints)
 - Attribution des empreintes physiques correspondant aux composants.
-[voir Affectation des empreintes](Images.md#Affectation-des-empreintes)
+[voir Affectation des empreintes](![image](https://github.com/user-attachments/assets/ec525ac9-ce2a-4edc-967c-f27d16fb9023)
+)
 
 ## Création de la carte PCB (implantation)
 - Placement des empreintes des composants sur le circuit imprimé.
