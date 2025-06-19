@@ -423,6 +423,7 @@ https://github.com/user-attachments/assets/f897ede6-44c2-42a2-96d0-31dc648d50c1
 ## Visualisation 3D du PCB
 ![image](https://github.com/user-attachments/assets/3e2ea849-39b4-47cb-a77e-ba3574701d50)  
 
+https://github.com/user-attachments/assets/c5784cd8-9c96-4c7d-97fa-074df501b6cc
 
 
 
