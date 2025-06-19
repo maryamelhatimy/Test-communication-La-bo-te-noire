@@ -393,8 +393,9 @@ Le routage généré a ensuite été importé dans KiCad pour la vérification f
 ![image](https://github.com/user-attachments/assets/c029f01b-0e0d-4864-b490-48a2cf801f62)  
 
 ## Visualisation 3D du PCB
-- Contrôle visuel du circuit imprimé en trois dimensions avant fabrication.
-  
-![ Visualisation 3D du PCB](https://github.com/user-attachments/assets/29374317-7dc3-43e4-95ee-a7a15d3b6c9a)
+- Contrôle visuel du circuit imprimé en trois dimensions avant fabrication.  
+![image](https://github.com/user-attachments/assets/eac7487f-bcca-48b1-8c02-5c45d225c37f)
+
+
 
 
