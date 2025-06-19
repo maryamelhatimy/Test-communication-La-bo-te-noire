@@ -369,15 +369,9 @@ La réalisation d’un PCB nécessite des choix précis de composants et un bon 
 - Attribution des empreintes physiques correspondant aux composants.
 ![image](https://github.com/user-attachments/assets/f9ea1c3f-b691-48d5-a4c3-829fab5aea9e)
 
-## Création de la carte PCB (implantation)
-- Placement des empreintes des composants sur le circuit imprimé.
-
-  ![Création de la carte PCB](https://github.com/user-attachments/assets/ea794759-0ee5-4ad1-9845-91bff85d9f4c)
-
-## Réorganisation des composants
+## Organisation du PCB
 - Ajustement de la disposition pour optimiser l’espace et faciliter le routage.
-
-![Réorganisation des composants](https://github.com/user-attachments/assets/159148ee-3c07-492a-8ed8-c2e2e21f3099)
+![image](https://github.com/user-attachments/assets/64ee506b-c1e7-46de-824a-649cb73a8f54)
 
 ## Routage des pistes
 - Traçage des pistes électriques reliant les composants.
