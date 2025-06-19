@@ -367,8 +367,7 @@ La réalisation d’un PCB nécessite des choix précis de composants et un bon 
 
 ## Affectation des empreintes (footprints)
 - Attribution des empreintes physiques correspondant aux composants.
-[voir Affectation des empreintes](![image](https://github.com/user-attachments/assets/ec525ac9-ce2a-4edc-967c-f27d16fb9023)
-)
+![image](https://github.com/user-attachments/assets/f9ea1c3f-b691-48d5-a4c3-829fab5aea9e)
 
 ## Création de la carte PCB (implantation)
 - Placement des empreintes des composants sur le circuit imprimé.
