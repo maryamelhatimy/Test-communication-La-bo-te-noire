@@ -106,6 +106,9 @@ https://github.com/user-attachments/assets/d1cc5dd5-9109-4822-be6e-245693643c00
 #### Observations :
 - Lorsque le bouton est pressé, le relais s’active et allume la LED.
 - Le comportement observé est conforme à la logique attendue et cohérente.
+## Bloc d’affichage de la station du controle
+Pour l’affichage des données au niveau de la station de contrôle, nous avons opté pour un écran LCD équipé d’un module I2C. Ce choix permet de simplifier le montage électronique en réduisant considérablement le nombre de connexions nécessaires entre le microcontrôleur et l’écran. Grâce à cette interface, seules deux lignes (SDA et SCL) suffisent pour transmettre les informations, ce qui laisse davantage de broches disponibles pour d’autres composants. L’écran LCD I2C assure ainsi une lecture claire et en temps réel des données de vitesse et d’orientation envoyées par la boîte noire.  
+![image](https://github.com/user-attachments/assets/29db70ec-851d-4a14-a918-5cb94e43d4d7)
 
 # La communication I2C
 Ce document constitue une présentation détaillée et approfondie du protocole **I2C (Inter-Integrated Circuit)**, qui est un standard de communication série synchrone très répandu dans l’électronique embarquée. Ce protocole facilite l’échange d’informations entre un ou plusieurs maîtres et plusieurs périphériques esclaves en utilisant seulement deux fils, simplifiant ainsi les connexions matérielles tout en assurant une communication fiable et efficace.  
